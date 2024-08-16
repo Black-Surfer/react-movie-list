@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_URL = "https://www.omdbapi.com";
-const API_KEY = "c4fcb4ee";
+const API_URL = process.env.REACT_APP_API_BASE_URL || "https://www.omdbapi.com";
+const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
 const getMovies = (page) => {
   return axios.get(API_URL, {
